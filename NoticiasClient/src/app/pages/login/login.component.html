@@ -1,0 +1,103 @@
+<div class="conteudoLogin">
+  <form class="conteudoForm" [formGroup]="loginForm" (submit)="submitLogin()">
+    <p class="titulo">Login</p>
+
+    <div class="conteudoInput">
+      <label for="email">Email</label>
+      <input
+        type="email"
+        placeholder="Insira seu email"
+        formControlName="email"
+        id="email"
+      />
+      <div
+        class="mensagemErro"
+        *ngIf="
+          loginForm.get('email')?.getError('required') &&
+          loginForm.get('email')?.touched
+        "
+      >
+        Email é obrigatório.
+      </div>
+      <div
+        class="mensagemErro"
+        *ngIf="
+          loginForm.get('email')?.getError('email') &&
+          loginForm.get('email')?.touched
+        "
+      >
+        Email inválido.
+      </div>
+    </div>
+
+    <div class="conteudoInput">
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        placeholder="Insira sua senha"
+        formControlName="senha"
+        id="senha"
+      />
+
+      <div
+        class="mensagemErro"
+        *ngIf="
+          loginForm.get('senha')?.getError('required') &&
+          loginForm.get('senha')?.touched
+        "
+      >
+        Senha é obrigatória.
+      </div>
+
+      <div
+        *ngIf="loginForm.get('senha')?.dirty && loginForm.get('senha')?.touched"
+      >
+        <p
+          class="mensagemErro"
+          [ngClass]="{
+            senhaValida: loginForm.get('senha')?.value?.match('^(?=.*[A-Z])')
+          }"
+        >
+          Pelo menos uma letra maiúscula.
+        </p>
+
+        <p
+          class="mensagemErro"
+          [ngClass]="{
+            senhaValida: loginForm.get('senha')?.value?.match('(?=.*[a-z])')
+          }"
+        >
+          Pelo menos uma letra minúscula.
+        </p>
+
+        <p
+          class="mensagemErro"
+          [ngClass]="{
+            senhaValida: loginForm.get('senha')?.value?.match('(.*[0-9].*)')
+          }"
+        >
+          Pelo menos um número
+        </p>
+        <p
+          class="mensagemErro"
+          [ngClass]="{
+            senhaValida: loginForm
+              .get('senha')
+              ?.value?.match('(?=.*[!@#$%^&*])')
+          }"
+        >
+          Pelo menos um caracter especial.
+        </p>
+        <p
+          class="mensagemErro"
+          [ngClass]="{
+            senhaValida: loginForm.get('senha')?.value?.match('.{8,}')
+          }"
+        >
+          Tamanho mínimo de 8 caracteres.
+        </p>
+      </div>
+    </div>
+    <button class="botaoLogin">Entrar</button>
+  </form>
+</div>

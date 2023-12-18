@@ -93,7 +93,7 @@ public class UsuarioController : ControllerBase
         );
 
         if (!resultado.Succeeded)
-            return Unauthorized();
+            return BadRequest("Usuário ou senha inválidos");
 
         var idUsuario = await _iAplicacaoUsuario.RetornaIdUsuario(login.email);
 

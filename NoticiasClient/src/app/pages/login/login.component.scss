@@ -1,0 +1,109 @@
+.conteudoLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background: rgb(196, 215, 255);
+  background: linear-gradient(
+    121deg,
+    rgba(196, 215, 255, 1) 0%,
+    rgba(125, 152, 204, 1) 35%,
+    rgba(58, 96, 174, 1) 70%,
+    rgba(2, 34, 98, 1) 100%
+  );
+}
+
+.conteudoForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  background-color: rgba(187, 198, 218, 0.05);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  transition: 0.5s ease-in-out;
+}
+
+.conteudoForm:hover {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: rgba(50, 50, 93, 0.35) 0px 4px 7px -1px,
+    rgba(0, 0, 0, 0.4) 0px 3px 5px -1px;
+  transition: 0.5s ease-in-out;
+}
+
+.titulo {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.conteudoInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  gap: 5px;
+  margin: 10px 0;
+}
+
+.conteudoInput > label {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.conteudoInput > input {
+  width: 100%;
+  box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.4) 0px 1px 3px -1px;
+  border-radius: 3px;
+  padding: 6px 10px;
+  font-size: 14px;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: all 0.5s ease-in-out;
+}
+
+.conteudoInput > input:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.5s ease-in-out;
+}
+
+.conteudoInput > input::placeholder {
+  color: rgb(69, 69, 69);
+}
+
+.mensagemErro {
+  width: 100%;
+  text-align: center;
+  color: rgb(124, 0, 0);
+  font-size: 14px;
+}
+
+.senhaValida {
+  width: 100%;
+  text-align: center;
+  color: rgb(2, 80, 19);
+  font-size: 14px;
+}
+
+.botaoLogin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 8px;
+  width: 100%;
+  margin-top: 25px;
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: rgba(50, 50, 93, 0.35) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.4) 0px 1px 3px -1px;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.botaoLogin:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}

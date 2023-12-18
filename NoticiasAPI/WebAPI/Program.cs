@@ -116,9 +116,15 @@ builder
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-const string url = "http://localhost:4200";
 
-app.UseCors(b => b.WithOrigins(url));
+#region Novo
+var urlClient = "http://localhost:4200";
+app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader().WithOrigins(urlClient));
+#endregion
+
+
+//const string url = "http://localhost:4200";
+// app.UseCors(b => b.WithOrigins(url));
 
 if (app.Environment.IsDevelopment())
 {
