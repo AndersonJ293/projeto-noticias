@@ -9,12 +9,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a954f355-7b23-4d45-bab2-edbc4515d31c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Entidades/Entidades/ViewModels/NoticiaViewModel.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.NoticiasAPI/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.NoticiasAPI/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Interfaces/INoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Interfaces/INoticia.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Interfaces/InterfarceServicos/IServicoNoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Interfaces/InterfarceServicos/IServicoNoticia.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dominio/Servicos/ServicoNoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Dominio/Servicos/ServicoNoticia.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Infraestrutura/Repositorio/RepositorioNoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Infraestrutura/Repositorio/RepositorioNoticia.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicacao/Aplicacoes/AplicacaoNoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Aplicacao/Aplicacoes/AplicacaoNoticia.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Aplicacao/Interfaces/IAplicacaoNoticia.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Aplicacao/Interfaces/IAplicacaoNoticia.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/WebAPI/Controllers/NoticiaController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/WebAPI/Controllers/NoticiaController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,6 +112,7 @@
       <workItem from="1702902620246" duration="2880000" />
       <workItem from="1702925004499" duration="4068000" />
       <workItem from="1702986547439" duration="2608000" />
+      <workItem from="1703005543025" duration="2654000" />
     </task>
     <task id="LOCAL-00001" summary="API Projeto Noticias">
       <option name="closed" value="true" />

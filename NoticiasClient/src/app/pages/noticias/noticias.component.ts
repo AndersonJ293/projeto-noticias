@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NoticiaService } from '../../services/noticia.service';
 import { Router } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { NoticiaViewModel } from '../../models/noticiaViewModel';
 
 @Component({
   selector: 'app-noticias',
@@ -14,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
   styleUrl: './noticias.component.scss',
 })
 export class NoticiasComponent implements OnInit {
-  listaNoticias!: any;
+  listaNoticias!: NoticiaViewModel[];
 
   constructor(private noticiaService: NoticiaService, private router: Router) {}
 

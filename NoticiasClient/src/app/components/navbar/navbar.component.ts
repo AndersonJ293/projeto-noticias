@@ -19,4 +19,8 @@ export class NavbarComponent {
     this.autenticaService.LimpaToken();
     this.router.navigate(['/login']);
   }
+
+  adicionaNoticia() {
+    this.router.navigate(['/addNoticia']);
+  }
 }

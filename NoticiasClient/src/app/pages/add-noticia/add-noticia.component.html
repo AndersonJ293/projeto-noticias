@@ -1,0 +1,45 @@
+<app-navbar></app-navbar>
+
+<div class="conteudoForm">
+  <p class="titulo">Adicionar Noticia</p>
+  <form [formGroup]="addNoticiaForm" (submit)="submitAddNoticia()">
+    <div class="grupoInput">
+      <label for="titulo">Titulo</label>
+      <input
+        type="text"
+        id="titulo"
+        formControlName="titulo"
+        placeholder="Titulo"
+      />
+      <p
+        class="mensagemErro"
+        *ngIf="
+          addNoticiaForm.get('titulo')?.getError('required') &&
+          addNoticiaForm.get('titulo')?.touched
+        "
+      >
+        Campo Titulo é obrigatório.
+      </p>
+    </div>
+    <div class="grupoInput">
+      <label for="informacao">Informação</label>
+      <textarea
+        type="text"
+        id="informacao"
+        formControlName="informacao"
+        placeholder="Informação"
+      >
+      </textarea>
+      <p
+        class="mensagemErro"
+        *ngIf="
+          addNoticiaForm.get('informacao')?.getError('required') &&
+          addNoticiaForm.get('informacao')?.touched
+        "
+      >
+        Campo Informação é obrigatório.
+      </p>
+    </div>
+    <button>Enviar</button>
+  </form>
+</div>

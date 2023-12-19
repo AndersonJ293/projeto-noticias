@@ -2,6 +2,7 @@ using Aplicacao.Interfaces;
 using Dominio.Interfaces;
 using Dominio.Interfaces.InterfarceServicos;
 using Entidades.Entidades;
+using Entidades.Entidades.ViewModels;
 
 namespace Aplicacao.Aplicacoes;
 
@@ -24,6 +25,11 @@ public class AplicacaoNoticia : IAplicacaoNoticia
     public async Task AtualizaNoticia(Noticia noticia)
     {
         await _iServicoNoticia.AtualizaNoticia(noticia);
+    }
+
+    public async Task<List<NoticiaViewModel>> ListaNoticiasCustomizada()
+    {
+        return await _iServicoNoticia.ListaNoticiasCustomizada();
     }
 
     public async Task<List<Noticia>> ListaNoticiasAtivas()

@@ -1,5 +1,6 @@
 using Aplicacao.Interfaces;
 using Entidades.Entidades;
+using Entidades.Entidades.ViewModels;
 using Entidades.Notificacoes;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -33,6 +34,14 @@ public class NoticiaController : ControllerBase
     public async Task<List<Noticia>> ListarNoticias()
     {
         return await _iAplicacaoNoticia.ListaNoticiasAtivas();
+    }
+
+    [Authorize]
+    [Produces("application/json")]
+    [HttpPost("/api/ListarNoticiasCustomizada")]
+    public async Task<List<NoticiaViewModel>> ListarNoticiasCustomizada()
+    {
+        return await _iAplicacaoNoticia.ListaNoticiasCustomizada();
     }
 
     [Authorize]
