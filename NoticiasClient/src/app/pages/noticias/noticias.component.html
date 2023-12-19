@@ -1,2 +1,20 @@
 <app-navbar></app-navbar>
-<p>noticias works!</p>
+
+<div class="conteudoNoticia">
+  <div class="listaNoticias">
+    <ng-container *ngFor="let noticia of listaNoticias">
+      <div class="noticia">
+        <div class="cabecalhoNoticia">
+          <p>{{ noticia.titulo }}</p>
+        </div>
+        <div class="corpoNoticia">
+          <p>{{ noticia.informacao }}</p>
+        </div>
+        <div class="rodapeNoticia">
+          <p>{{ noticia.dataCadastro | date : "dd/MM/yyy HH:MM" }}</p>
+          <p>{{ noticia.usuarioId }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 import { LoginModel } from '../../models/loginModel';
 import { CommonModule } from '@angular/common';
 import { LoginService } from '../../services/login.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
+import { AutenticaService } from '../../services/autentica.service';
 
 @Component({
   selector: 'app-login',
@@ -27,7 +28,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private autenticaService: AutenticaService
   ) {}
 
   ngOnInit(): void {
@@ -54,7 +56,7 @@ export class LoginComponent implements OnInit {
         var userToken = token;
         if (!userToken) return;
 
-        localStorage.setItem('token', userToken);
+        this.autenticaService.DefineToken(token);
         this.router.navigate(['/noticias']);
       },
       (error) => {
